@@ -1,0 +1,29 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'tl;dr'
+theme = "hugo-theme-m10c"
+
+[params]
+  author = "AlexTLDR"
+  description = "Welcome to my blog!"
+  avatar =  "/images/gopherAvatar.svg"
+
+[[params.social]]
+  icon = "brand-github"
+  name = "My Github"
+  url = "https://github.com/AlexTLDR"
+
+[[params.social]]
+  icon = "brand-linkedin"
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/alexandru-badragan/"
+
+[[params.social]]
+  icon = "globe"
+  name = "Partner Website"
+  url = "https://alextldr.com"
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
