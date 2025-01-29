@@ -1,0 +1,10 @@
+services:
+  hugo:
+    image: hugomods/hugo:latest
+    container_name: hugo_server
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "2000:1313"
+    command: ["server", "--bind", "0.0.0.0", "--port", "1313", "--watch"]
