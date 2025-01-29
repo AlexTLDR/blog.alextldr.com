@@ -7,5 +7,4 @@ services:
     working_dir: /app
     ports:
       - "2000:2000"
-    command: ["server", "--bind", "0.0.0.0", "--port", "2000", "--watch"]
-
+    command: ["hugo", "server", "--bind", "0.0.0.0", "--port", "2000", "--watch"]
