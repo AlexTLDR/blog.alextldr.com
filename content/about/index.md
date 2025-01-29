@@ -10,6 +10,7 @@ description: "Learn more about me and my journey."
 Hello! I’m [Your Name], a passionate developer and blogger. This is my personal website where I share my thoughts, projects, and experiences.
 
 ### My Interests
+- Go Development
 - Web Development
 - Open Source
 - DevOps

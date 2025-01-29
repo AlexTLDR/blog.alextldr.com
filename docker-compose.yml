@@ -8,3 +8,4 @@ services:
     ports:
       - "2000:1313"
     command: ["server", "--bind", "0.0.0.0", "--port", "1313", "--watch"]
+    
