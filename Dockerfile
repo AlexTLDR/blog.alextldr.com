@@ -2,6 +2,6 @@ FROM hugomods/hugo:latest
 
 WORKDIR /app
 COPY . /app
-EXPOSE 1313
+EXPOSE 2000
 
-CMD ["server", "--bind", "0.0.0.0", "--port", "1313", "--watch"]
+CMD ["server", "--bind", "0.0.0.0", "--port", "2000", "--watch"]

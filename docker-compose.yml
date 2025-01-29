@@ -6,6 +6,6 @@ services:
       - .:/app
     working_dir: /app
     ports:
-      - "2000:1313"
-    command: ["server", "--bind", "0.0.0.0", "--port", "1313", "--watch"]
-    
+      - "2000:2000"
+    command: ["server", "--bind", "0.0.0.0", "--port", "2000", "--watch"]
+
