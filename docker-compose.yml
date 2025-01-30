@@ -4,6 +4,8 @@ services:
     container_name: hugo_server
     ports:
       - "2000:2000"
+    volumes:
+      - .:/app:cached
     networks:
       - hugo_network
 

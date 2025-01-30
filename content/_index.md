@@ -1,15 +1,13 @@
 ---
-title: "Welcome to My Blog"
-date: 2023-10-10
+title: "Hi, I'm Alex."
+date: 2025-01-30
 draft: false
 ---
-
-## Welcome!
 
 Hello and welcome to my blog! Here, I share my thoughts, tutorials, and projects on web development, programming, and more.
 
 ### Recent Posts
-- [My First Blog Post](/posts/intro/)
+- [Linux on Lunar Lake Silicon](/posts/lunix/)
 
 ### Explore
 - [About Me](/about/)
