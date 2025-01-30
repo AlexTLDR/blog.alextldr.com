@@ -1,13 +1,12 @@
 ---
-title: "About Me"
-date: 2025-01-28
+date: 2025-01-30
 draft: false
 description: "Learn more about me and my journey."
 ---
 
 ## About Me
 
-Hello! I’m [Your Name], a passionate developer and blogger. This is my personal website where I share my thoughts, projects, and experiences.
+Hi! I'm Alex, a passionate developer—and apparently a blogger too! 🙂 This is my blog, where I share my thoughts, projects, and experiences.
 
 ### My Interests
 - Go Development
@@ -15,5 +14,10 @@ Hello! I’m [Your Name], a passionate developer and blogger. This is my persona
 - Open Source
 - DevOps
 
+### My Live Projects
+- [Stuttgart Gophers](https://stuttgart-gophers.de)
+- [My Personal Website](https://alextldr.com)
+- [FotoHive](https://fotohive.alextldr.com)
+
 ### Contact Me
-You can reach me at [your.email@example.com](mailto:your.email@example.com).
+You can reach me at [alex@alextldr.com](mailto:alex@alextldr.com).
