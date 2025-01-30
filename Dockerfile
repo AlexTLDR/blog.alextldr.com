@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY . /app
 
-RUN git clone https://github.com/vaga/hugo-theme-m10c.git themes/hugo-theme-m10c
+RUN rm -rf themes/hugo-theme-m10c && \
+    git clone https://github.com/vaga/hugo-theme-m10c.git themes/hugo-theme-m10c
 
 EXPOSE 2000
 
