@@ -1,4 +1,4 @@
-baseURL = "https://alextldr.github.io/blog.alextldr.com/"
+baseURL = "https://blog.alextldr.com/"
 languageCode = 'en-us'
 title = 'tl;dr'
 theme = "hugo-theme-m10c"
