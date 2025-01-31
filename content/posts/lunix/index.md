@@ -7,6 +7,7 @@ tags:
   - linux
   - intel
   - laptop
+  - EndeavourOS
 ---
 
 ## Can I run Linux on my Lunar Lake Silicon laptop?
