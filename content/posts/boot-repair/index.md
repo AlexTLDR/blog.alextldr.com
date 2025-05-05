@@ -1,7 +1,7 @@
 ---
 title: "I ~~use~~ boot Arch btw"
 date: 2025-05-05
-draft: true
+draft: false
 description: "How to repair a broken systemd-boot bootloader"
 tags:
   - linux
@@ -10,6 +10,8 @@ tags:
   - grub
   - EndeavourOS
   - Arch Linux
+  - dual-boot
+  - windows 11
 ---
 
 ## Installing Arch **the right way**
