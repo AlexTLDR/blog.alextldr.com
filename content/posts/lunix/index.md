@@ -38,4 +38,4 @@ Why did I choose Lunar Lake? I was looking for an affordable alternative to a Ma
 - General stuff like keyboard shortcuts, touchpad, FN keys, keyboard backlight, etc.
 - BIOS settings handling dual Windows 11/Linux installation
 
-[Here’s the link to the laptop—the focus of my next blog post.](https://www.pcspecialist.co.uk/notebooks/FusionVI-14/)
+[Here’s the link to the laptop—the focus of my next blog post.](https://blog.alextldr.com/posts/fusion-series-14/)
