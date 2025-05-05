@@ -30,7 +30,7 @@ Of course, sometimes Windows updates would mess with my setup. But, in most case
 
 ## Today
 
-Today turned out to be a frustrating day. Yesterday, I played Kingdom Come: Deliverance on my Windows setup (I never finished the game, and before buying the new Kingdom Come release, I want to wrap up the original). But then Windows prompted me for updates. As mentioned in previous posts, I’m running Windows 11 in a dual-boot setup with EndeavourOS. Since I installed EndeavourOS the Calamares/Endeavour way, it uses systemd-boot instead of GRUB. I didn’t realize it at the time, but the Windows update messed up my bootloader, and Linux became unbootable (thanks, Microsoft, for assuming my hardware is still under your control even after I’ve paid for a Windows license).
+Today turned out to be a frustrating day. Yesterday, I played [Kingdom Come: Deliverance](https://kingdomcomerpg.com/) on my Windows setup (I never finished the game, and before buying the new Kingdom Come release, I want to wrap up the original). But then Windows prompted me for updates. As mentioned in previous posts, I’m running Windows 11 in a dual-boot setup with EndeavourOS. Since I installed EndeavourOS the Calamares/Endeavour way, it uses systemd-boot instead of GRUB. I didn’t realize it at the time, but the Windows update messed up my bootloader, and Linux became unbootable (thanks, Microsoft, for assuming my hardware is still under your control even after I’ve paid for a Windows license).
 
 Since bootloaders weren’t something I’d ever focused on, and I was content with GRUB, I had no idea how systemd-boot worked or how to fix the issue.
 
