@@ -114,3 +114,8 @@ The TL;DR for fixing your boot partition—if you’ve broken or deleted it—is
       cat /etc/fstab
       ```
     In my case, Windows was using an efi partition and Linux was using another efi partition. The UUID of /efi was wrong (by default it was using the UUID of the Windows efi partition).
+
+## Simple, isn't it?
+
+Of course, it took me a full day to figure this out. If you're facing the same challenge and the [EndeavourOS forum](https://forum.endeavouros.com) doesn’t have the answer you need, feel free to reach out — I’m happy to help. You can contact me at [alex@alextldr.com](mailto:alex@alextldr.com).
+
