@@ -1,5 +1,5 @@
 ---
-title: "I ~~use~~ boot Arch btw"
+title: "I boot Arch btw"
 date: 2025-05-05
 draft: false
 description: "How to repair a broken systemd-boot bootloader"
