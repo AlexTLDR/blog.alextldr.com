@@ -4,26 +4,33 @@ title = 'tl;dr'
 theme = "hugo-theme-m10c"
 
 [params]
-  author = "AlexTLDR"
-  description = "Welcome to my blog!"
-  avatar =  "/images/gopherAvatar.svg"
+author = "AlexTLDR"
+description = "Welcome to my blog!"
+avatar = "/images/gopherAvatar.svg"
+
+[params.style]
+darkestColor = "#282A36"  # Dracula Background
+darkColor = "#44475A"     # Dracula Current Line
+lightColor = "#F8F8F2"    # Dracula Foreground
+lightestColor = "#FFFFFF" # Pure white for headings
+primaryColor = "#BD93F9"  # Dracula Purple (for links)
 
 [[params.social]]
-  icon = "brand-github"
-  name = "My Github"
-  url = "https://github.com/AlexTLDR"
+icon = "brand-github"
+name = "My Github"
+url = "https://github.com/AlexTLDR"
 
 [[params.social]]
-  icon = "brand-linkedin"
-  name = "LinkedIn"
-  url = "https://www.linkedin.com/in/alexandru-badragan/"
+icon = "brand-linkedin"
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/alexandru-badragan/"
 
 [[params.social]]
-  icon = "globe"
-  name = "Partner Website"
-  url = "https://alextldr.com"
+icon = "globe"
+name = "Partner Website"
+url = "https://alextldr.com"
 
 [[menu.main]]
-  identifier = "tags"
-  name = "Tags"
-  url = "/tags/"
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
