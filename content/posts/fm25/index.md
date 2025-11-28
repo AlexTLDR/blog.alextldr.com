@@ -1,3 +1,14 @@
+---
+title: "FM26"
+date: 2025-11-28
+draft: false
+description: "Thoughts and initial impressions about Football Manager 2026 (FM26)"
+tags:
+  - gaming
+  - football-manager
+  - review
+---
+
 # [FM26](https://www.footballmanager.com/fm26)
 
 ## Don't
@@ -28,6 +39,3 @@ and if bored, learn to program in [Go](https://go.dev/) or [Rust](https://rust-l
 *Maybe I am a grown up and had too many expectations from [Miles](https://en.wikipedia.org/wiki/Miles_Jacobson). But my
 favorite franchise's direction is heading towards a low point. [FM](https://www.footballmanager.com/) hope you improve. 
 For sure, next year [I](https://alextldr.dev/), I will not preorder anymore*
-
-
-
