@@ -30,6 +30,11 @@ icon = "globe"
 name = "Partner Website"
 url = "https://alextldr.com"
 
+[[params.social]]
+icon = "brand-go"
+name = "Stuttgart Gophers"
+url = "https://stuttgart-gophers.de"
+
 [[menu.main]]
 identifier = "tags"
 name = "Tags"
