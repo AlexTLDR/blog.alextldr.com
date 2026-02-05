@@ -31,7 +31,7 @@ name = "Partner Website"
 url = "https://alextldr.com"
 
 [[params.social]]
-icon = "brand-go"
+icon = "/images/stuttgart-gophers.svg"
 name = "Stuttgart Gophers"
 url = "https://stuttgart-gophers.de"
 
