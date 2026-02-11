@@ -17,7 +17,7 @@ language for systems programming, but it is not a great language for learning pr
 I think many people don't need Copilot to tell them that. This is the majority opinion in the programming communities.
 Most people consider Rust a second or third language to learn. I would say that my 1st language is Go, but in my learning 
 journey, I touched Python as well, even used it in my DevOps roles. Besides Python, I have touched a little C and
-JavaScript. I have used C in learning projects to understand memory management and JS better, mostly to help with the 
+JavaScript. I have used C in learning projects to understand memory management and JS mostly to help with the 
 frontend part of my projects.
 
 From the languages mentioned above, I can say that I formed an opinion regarding type safety, and this was the main reason
@@ -213,7 +213,7 @@ fn main() {
 ```
 *More about strings in the next post.*
 
-### Declaring variables and code blocks
+## Declaring variables and code blocks
 Variables can be declared with the `let` keyword. Code blocks are declared with the `{}` braces.
 
 ```rust
@@ -236,7 +236,7 @@ error[E0425]: cannot find value `y` in this scope
 ```
 The variable `y` is not available outside of the code block where it was declared.
 
-### Mutability
+## Mutability
 Variables are immutable by default. This means that once a variable is initialized, it cannot be changed. 
 To make a variable mutable, the `mut` keyword needs to be used.
 
@@ -248,7 +248,7 @@ fn main() {
     println!("x is {x}");
 }
 ```
-### Shadowing
+## Shadowing
 Shadowing occurs when we declare a new variable with the same name as a previous one. In a nested scope, the old variable
 is preserved and becomes accessible again once the inner scope ends. However, in the same scope, the new variable effectively 
 replaces the old one for the remainder of that block.
@@ -291,7 +291,7 @@ appending to)
     - use shadowing when you are processing data (converting, trimming or scaling) and want to reuse a descriptive name
 without making it accidentally changeable/mutable.
 
-### Comments
+## Comments
 At the end of the post, I want to mention about comments. As in a lot of programming languages, Rust uses `//` for single 
 line comments and `/* */` for multi-line comments. Only notable thing, `///` is used for documentation purposes.
 ```rust
