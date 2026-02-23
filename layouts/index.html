@@ -5,18 +5,24 @@
     <div class="post-content">
       {{ .Content }}
 
-      <h3>Recent Posts</h3>
-      <ul>
-        {{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
-      </ul>
-
       <h3>Rust-Zettels</h3>
       <p>My journey to learning Rust, the Zettelkasten way.</p>
       <ul>
         {{ range (where .Site.RegularPages "Section" "rust-zettels").ByDate.Reverse }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <span style="color: #888; font-size: 0.9em;"> - {{ .Date.Format "Jan 2, 2006" }}</span>
+          </li>
+        {{ end }}
+      </ul>
+
+      <h3>Posts</h3>
+      <ul>
+        {{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <span style="color: #888; font-size: 0.9em;"> - {{ .Date.Format "Jan 2, 2006" }}</span>
+          </li>
         {{ end }}
       </ul>
 
