@@ -11,3 +11,48 @@
   transform: scale(1.1);
 }
 
+// Dracula-themed syntax highlighting
+.highlight {
+  background: #282A36 !important;
+  border-radius: 4px;
+
+  pre {
+    background: #282A36 !important;
+    color: #F8F8F2;
+  }
+
+  // Dracula color scheme
+  .k, .kd, .kn, .kp, .kr, .kt { color: #FF79C6; } // Keywords (pink)
+  .nf, .fm { color: #50FA7B; } // Function names (green)
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx { color: #F1FA8C; } // Strings (yellow)
+  .na, .nb, .nc, .no, .nd, .ni, .ne { color: #8BE9FD; } // Built-ins, attributes (cyan)
+  .m, .mf, .mh, .mi, .mo, .il { color: #BD93F9; } // Numbers (purple)
+  .c, .c1, .cm, .cs { color: #6272A4; font-style: italic; } // Comments (gray)
+  .o, .ow { color: #FF79C6; } // Operators (pink)
+  .p { color: #F8F8F2; } // Punctuation (foreground)
+  .n, .nx, .py { color: #F8F8F2; } // Names (foreground)
+  .nt { color: #FF79C6; } // Tags (pink)
+  .nv, .vc, .vg, .vi { color: #8BE9FD; } // Variables (cyan)
+  .err { color: #FF5555; } // Errors (red)
+  .gd { color: #FF5555; } // Deleted (red)
+  .gi { color: #50FA7B; } // Inserted (green)
+  .ge { font-style: italic; } // Emphasis
+  .gs { font-weight: bold; } // Strong
+  .gh { color: #BD93F9; font-weight: bold; } // Heading (purple)
+  .gu { color: #8BE9FD; font-weight: bold; } // Subheading (cyan)
+}
+
+// Inline code styling
+code {
+  background: #282A36;
+  color: #F1FA8C !important;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+// Code blocks
+pre code {
+  background: transparent;
+  padding: 0;
+}

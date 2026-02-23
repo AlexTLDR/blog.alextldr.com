@@ -3,6 +3,23 @@ languageCode = 'en-us'
 title = 'tl;dr'
 theme = "hugo-theme-m10c"
 
+# Syntax highlighting configuration
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    noHl = false
+    style = 'dracula'
+    tabWidth = 4
+
 [params]
 author = "AlexTLDR"
 description = "Welcome to my blog!"
