@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <article>
+    {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+    {{ with .Content }}<div class="post-content">{{ . }}</div>{{ end }}
+    
+    <h3>Rust-Zettels</h3>
+    <p>My journey to learning Rust, the Zettelkasten way.</p>
+    <ul>
+      {{ range (where .Site.RegularPages "Section" "rust-zettels").ByDate }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+    
+    <h3>Explore</h3>
+    <ul>
+      <li><a href="/about/">About Me</a></li>
+    </ul>
+  </article>
+{{ end }}
+

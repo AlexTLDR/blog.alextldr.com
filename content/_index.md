@@ -8,12 +8,5 @@ Hello and welcome to my blog! Here, I share my thoughts, tutorials, and projects
 
 ### Upcoming events
 
-- [Stuttgart Gophers February Meetup](https://www.meetup.com/stuttgart-gophers/events/312975296)
+- [TBD](https://stuttgart-gophers.de/upcoming)
 
-### Rust-Zettels
-My journey to learning Rust, the Zettelkasten way.
-- [0-setup-zettelkasten](/rust-zettels/0-setup-zettelkasten/)
-- [1-basics](/rust-zettels/1-basics/)
-
-### Explore
-- [About Me](/about/)
