@@ -9,6 +9,7 @@ description: "Learn more about me and my journey."
 Hi! I'm Alex, a passionate developer—and apparently a blogger too! 🙂 This is my blog, where I share my thoughts, projects, and experiences.
 
 ### My Interests
+- Rust Development
 - Go Development
 - Web Development
 - Open Source
@@ -17,8 +18,10 @@ Hi! I'm Alex, a passionate developer—and apparently a blogger too! 🙂 This i
 ### My Live Projects
 - [Stuttgart Gophers](https://stuttgart-gophers.de)
 - [My Personal Website](https://alextldr.com)
-- [FotoHive](https://fotohive.alextldr.com)
+- [mycv.quest](https://mycv.quest/)
+- [interpretor](https://interpretor.alextldr.com/)
 - [TSV Ruppertshofen Pizzeria](https://pizzeria.alextldr.com)
+- [portfolio](https://alextldr.com/#portfolio)
 
 ### Contact Me
 You can reach me at [alex@alextldr.com](mailto:alex@alextldr.com).
