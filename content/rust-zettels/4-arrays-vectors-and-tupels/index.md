@@ -27,6 +27,7 @@ fn main() {
     let array1 = [1, 2, 3]; // [i32; 3]
     let array2 = [1, 2, 3, 4]; // [i32; 4]
 }
+```
 - declaring an array with the same value repeating, in the square brackets, you can declare it by entering the value, then a semicolon and then the number of times you want to repeat
 ```rust
 fn main() {
