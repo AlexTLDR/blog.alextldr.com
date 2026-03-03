@@ -118,7 +118,7 @@ fn main() {
     num_vec.push('T');  
     println!("{}", num_vec.capacity()); // 8  
     num_vec.push('L');  
-    num_vec.push('D');  
+    num_vec.push('D');
     num_vec.push('R');  
     println!("{}", num_vec.capacity()); // still 8 since we didn't 
     // overflow the len of the vector  
