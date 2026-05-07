@@ -6,7 +6,7 @@ draft: false
 
 Hello and welcome to my blog! Here, I share my thoughts, tutorials, and projects on web development, programming, and more.
 
-### Upcoming events
+### Upcoming [Stuttgart Gophers](https://stuttgart-gophers.de/) events
 
-- [TBD](https://stuttgart-gophers.de/upcoming)
+- [Common Go Mistakes: Real Examples - 25th of June 2026 ](https://www.meetup.com/stuttgart-gophers/events/314424169/)
 
