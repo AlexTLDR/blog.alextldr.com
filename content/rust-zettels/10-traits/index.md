@@ -8,7 +8,6 @@ tags:
 - traits
 - Debug
 - Display
-- self
 - Self
 - std::fmt
 - bounds
