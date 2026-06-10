@@ -1,13 +1,15 @@
 ---
 title: "Iterators and closures"
 date: 2026-06-10
-draft: true
+draft: false
 description: "Iterators and closures enable concise, expressive, and efficient data processing in Rust"
 tags:
 - rust
 - iterators
 - closures
 - methods
+- consumers
+- enumerate
 ---
 
 - in this post, we will learn about Rust's functional style. We chain methods together so that each method's output becomes the next method's input. 
@@ -369,5 +371,187 @@ fn main() {
 
 - **note that the `FrinkCloner` struct doesn’t hold any data! It’s a brilliant example of how an iterator differs from a standard collection (like an Array or a Vec). An iterator doesn't need to store items; it only needs to know how to *produce* the next item.**
 
+## Closures
+
+- closures are similar to a concept to Go's anonymous functions
+- instead of using `()` they use `||`
+```rust
+fn main() {
+    let closure_example = || println!("This is a closure");
+    closure_example();
+}
+```
+- in this example, the closure takes nothing, `||` and prints the message
+- between the `||` we can add input variables as in a normal function
+```rust
+fn main() {
+    let duff_beers_sixpacks = |x: u8| println!("The number of Duff beers is {}", x / 6);
+    duff_beers_sixpacks(6 + 6);
+}
+// prints
+// The number of Duff beers is 2
+```
+- for longer closures, we need to use code blocks
+```rust
+fn main() {
+    let total_duffs = || {
+        let homer_duffs = 10;
+        let barney_duffs = 3;
+        let lenny_duffs = 5;
+        println!(
+            "The boys have a total number of {} Duffs ",
+            homer_duffs + barney_duffs + lenny_duffs
+        );
+    };
+    total_duffs();
+}
+// prints
+// The boys have a total number of 18 Duffs
+```
+- one special quirk of closures, is that they can take variables from outside the closure
+```rust
+fn main() {
+    let homer_duffs = 10;
+    let barney_duffs = 3;
+    let lenny_duffs = 5;
+    let total_duffs = || {
+        println!(
+            "The boys have a total number of {} Duffs ",
+            homer_duffs + barney_duffs + lenny_duffs
+        );
+    };
+    total_duffs();
+}
+```
+- strictly semantic, `||` that doesn't use outside variables is called an *anonymous function* and `|x: u8|` which takes one or more variables, is called a *closure* . But people usually refer to both as *closures*
+
+### Closures inside of methods
+
+- most often, closures are used within methods
+- we have already seen closures in methods in the iteration part of the post, for example in the *Iterator Adaptors* example
+```rust
+let marges_cart: Vec<String> = shopping_list
+        .into_iter()
+        .skip(1) // ADAPTOR: She skips the first item (Homer's beer)
+        .filter(|item| *item != "Krusty-O's") // ADAPTOR: She refuses to buy sugary cereal
+        .map(|item| format!("{} (Used 50% Coupon)", item)) // ADAPTOR: She prepares her coupons
+        .collect(); // CONSUMER: Marge gets to the register and finally buys the items!
+```
+- below an example in which we can write the body of the closure different each time, as long as the signature matches
+```rust
+fn main() {
+    (1..=3).for_each(|bottle_num| println!("Barney chugs bottle #{bottle_num}!"));
+
+    (1..4).for_each(|bottle_num| {
+        println!("Homer inspects bottle #{bottle_num}...");
+        if bottle_num % 2 == 0 {
+            println!("  -> It's an even number! Perfect classic Duff.")
+        } else {
+            println!("  -> It's an odd number! Ugh, it's a Duff Lite.")
+        }
+    });
+}
+// prints
+// Barney chugs bottle #1!
+// Barney chugs bottle #2!
+// Barney chugs bottle #3!
+// Homer inspects bottle #1...
+//   -> It's an odd number! Ugh, it's a Duff Lite.
+// Homer inspects bottle #2...
+//   -> It's an even number! Perfect classic Duff.
+// Homer inspects bottle #3...
+//   -> It's an odd number! Ugh, it's a Duff Lite.
+```
+
+### `.unwrap_or_else()`
+
+- another cool method that works with closures, is `.unwrap_or_else()`. This is a useful method as it allows us to pass a closure as the default value
+```rust
+fn main() {
+    // Lisa has 3 Bleeding Gums Murphy albums (volumes 1, 2, and 3)
+    let jazz_records = vec![1, 2, 3];
+
+    // She reaches for the 4th album (index 3).
+    // It doesn't exist! So .unwrap_or_else() triggers the backup closure.
+    let fallback_record = jazz_records.get(3).unwrap_or_else(|| {
+        println!("Album 4 is missing! Activating Lisa's backup plan...");
+
+        // Backup Plan A: Try to grab the 3rd album (index 2) instead
+        if let Some(record) = jazz_records.get(2) {
+            println!("Found Album 3! We are saved.");
+            record
+        } else {
+            // Backup Plan B: If Bart stole the whole collection, play track 0
+            println!("Everything is gone. Playing standard scale practice.");
+            &0
+        }
+    });
+
+    println!("Lisa is currently playing: {}", fallback_record);
+}
+// prints
+// Album 4 is missing! Activating Lisa's backup plan...
+// Found Album 3! We are saved.
+// Lisa is currently playing: 3
+```
+
+### `.enumerate`
+
+- when you just want the data, a standard iterator works fine. But when you need to know exactly *where* that data is in the line, `.enumerate()` is the perfect tool
+- let’s say Chief Wiggum is looking at a police lineup of Springfield's worst criminals. A standard iterator will just hand him `Some("Snake")`, then `Some("Sideshow Bob")`, and finally `Some("Fat Tony")`
+- but what if Wiggum needs to fill out the police paperwork and wants to see the **exact suspect number (the index)** along with the criminal's name?
+- it turns out that all you have to do is add `.enumerate()` to the iterator. This automatically pairs every item with its index, handing you a neat little tuple: `(index, item)`
+```rust
+fn main() {
+    // The criminals standing against the wall
+    let lineup = vec!["Snake", "Sideshow Bob", "Fat Tony"];
+
+    // THE PAPERWORK PIPELINE
+    lineup
+        .iter()
+        .enumerate() // ADAPTOR: Attaches a number (0, 1, 2...) to each item!
+        .for_each(|(suspect_number, criminal)| {
+            // Because of .enumerate(), our worker closure now takes a tuple!
+            println!("Suspect #{suspect_number} is: {criminal}");
+        });
+}
+// prints
+// Suspect #0 is: Snake
+// Suspect #1 is: Sideshow Bob
+// Suspect #2 is: Fat Tony
+```
+
+### `|_|` in a closure
+
+- `|_|` in a closure means that the closure needs to take an argument that is named (like the tuple `(suspect_number, criminal)` in our last example ) but we don't want to use it
+- let's use Maggie at the end of the post. The family is handing Maggie different toys, but she doesn't care what they are. She is just going to suck her pacifier anyway
+```rust
+fn main() {
+    let toys = vec!["Blocks", "Teddy Bear", "Rattle"];
+
+    // ❌ ERROR! .for_each() is trying to hand Maggie a toy, 
+    // but her closure has no hands `||` to accept it!
+    toys.iter().for_each(|| println!("*Maggie sucks pacifier*"));
+}
+```
+- if we run this code, we will get the below error in which the compiler teaches us how to fix the issue
+```bash
+error[E0593]: closure is expected to take 1 argument, but it takes 0 arguments
+ --> src/main.rs:6:17
+  |
+6 |     toys.iter().for_each(|| println!("*Maggie sucks pacifier*"));
+  |                 ^^^^^^^^ -- takes 0 arguments
+  |                 |
+  |                 expected closure that takes 1 argument
+  |
+help: consider changing the closure to take and ignore the expected argument
+  |
+6 |     toys.iter().for_each(|_| println!("*Maggie sucks pacifier*"));
+  |                           +
+
+For more information about this error, try `rustc --explain E0593`.
+error: could not compile `tmp` (bin "tmp") due to 1 previous error
+```
+
 ---  
-🦀 In the next post, we will learn about TBD - TO DO
+🦀 In the next post, we will learn more about closures and iterators 😬, we will take a look at some of the most common methods for iterators and closures
